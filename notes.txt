@@ -1,0 +1,131 @@
+Spring framework - Java EE technologies - EJB's, JSF etc...
+
+---Advantages---
+
+-Spring enables developers to develop applications which doesn't use application servers
+that provides ejb support - can use tomcat which is a lightweight web server
+
+-Spring provides us with feature rich modules which we can use to develop the applications from end to end
+
+-Spring allows application code to be developed in a loosely coupled manner promoting programming to interface approach
+
+List<String>x = new ArrayList<>(); - Switching implementations is easy
+ArrayList<String>t = new ArrayList<>();
+
+- Dependency injection in spring
+
+-Spring modules
+
+-Core - spring-core, spring-beans, spring-context, spring-context-support, and spring-expression
+-Web -spring-web, spring-security, spring-webmvc, spring-websocket, and spring-webmvc-portlet
+-Data -spring-jdbc,spring-tx,spring-orm,spring-oxm, spring-jms
+-AOP - spring-aop, spring-aspects,spring-instrument
+-Messaging - spring-integration
+-Test - spring-test
+-Batch- spring-batch
+-Micro services - spring-cloud,spring-eureka, spring-hysterix  etc..
+
+Development approaches for spring applications
+-XML
+-XML + Annotation
+-Complete Annotation
+-Boot(Autoconfigurations and microservices development)
+
+--Modules
+-Spring core
+-Spring MVC
+-Spring Data - JPA, Hibernate
+
+
+-Creating Beans
+-BeanFactory vs ApplicationContext - Spring Container
+-Bean Scopes
+-Spring bean annotations - @Bean, @Component,@Service,@Repository,@Controller,@RESTController
+-Bean wiring -(setter, constructor, field)
+-Bean Collision with Qualifier annotation
+-Resource vs Autowire vs Inject
+-Importing resources
+-Component scanning
+-Lookup method DI
+-Bean lifecycle
+
+----Spring Data Hibernate----
+-Both XML and annotation approachon integrating spring with hibernate
+-Log4j setup
+-JUnit testcases
+-Embedded databases(H2,HSQL,Derby etc..)
+
+---Spring Data JPA-------
+-Project without boot
+-Project with boot
+
+
+XML -> set of elements(each-multiple children), Platform independent markup language
+<bookstore>
+	<books>
+	   <book>
+	      <isbn>1</isbn>
+	      <author>Mike</autor>
+	   </book>
+	   	<book>
+	      <isbn>2</isbn>
+	      <author>Mike</autor>
+	   </book>	   
+	</books>
+</bookstore>
+
+XSD's -> specify validation rules for an example -bookstore.xsd
+namespaces -> are used to avoid coflicts
+namespcae book1.xsd - xlmns:b1
+namespace book2.xsd -xmlns:b2
+
+<b1:book>
+
+namspaces and xsd's
+
+
+
+-@Component
+-@Autowire
+-@Qualifier
+-@Configuration
+-@Bean
+-@ComponentScan
+-@scope
+-@Lookup
+
+-ApplicationContext
+-ClassPathXLApplicationContext
+-AnnotationConfigApplicationContext
+
+-Spring bean scopes
+--Singleton(default scope) -> one single instance per container
+--ProtoType -> one instance per request
+---Other scopes (Web applications)
+-Request - one instance per every HttpRequest
+-Session - one instance Per HttpSession
+-GlobalSession- Portlet based application
+
+--Injecting a singleton to a singleton is good
+--Injecting a prototype to proto-type is good
+--Injecting a singleton to proto-type is good
+--Inject a prototype to a singleton (proto type bean will act as a singleton) - Lookup method DI
+
+-Bean Factory vs Application Context
+-Bean Factory is a light weight spring container -> AOP, internationalization, remoting, messaging
+-ApplicationContext - beanfactory + all the other features
+
+-Bean factory does a lazy instantiation of your beans
+=Application context does a eager instantion
+
+XML+annotation(bean - xml, use autowiring inside ur class)
+
+
+
+
+
+
+
+
+
+
